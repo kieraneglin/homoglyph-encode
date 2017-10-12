@@ -1,4 +1,4 @@
 [root]
-name = "nice-encode"
+name = "homoglyph_encode"
 version = "0.1.0"
 

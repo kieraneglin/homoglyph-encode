@@ -1,6 +1,6 @@
 [package]
-name = "nice-encode"
+name = "homoglyph_encode"
 version = "0.1.0"
-authors = ["Kieran Eglin <kieran.eglin@gmail.com>"]
+authors = ["Kieran Eglin"]
 
 [dependencies]

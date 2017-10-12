@@ -5,7 +5,7 @@ const CHARSET: &str = "349ACEFHJKLMNPRTUVWXYabefghkpqstuxyz";
 
 pub fn encode(mut num: usize) -> String {
     let chars: Vec<char> = CHARSET.chars().collect();
-    let base = chars.len();
+    let base = CHARSET.len();
 
     if num == 0 {
         return chars[0].to_string();
