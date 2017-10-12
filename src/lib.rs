@@ -3,6 +3,15 @@ const CHARSET: &str = "349ACEFHJKLMNPRTUVWXYabefghkpqstuxyz";
 // B8G6I1l0OoQDS5Z72ij (obvious)
 // rn -> m,vv -> w, cl -> d
 
+/// Encodes a given number as a homoglyph-free `String`.
+///
+/// # Examples
+///
+/// ```rust
+/// let encoded = homoglyph_encode::encode(10);
+///
+/// assert_eq!(encoded, "L");
+/// ```
 pub fn encode(mut num: usize) -> String {
     let chars: Vec<char> = CHARSET.chars().collect();
     let base = CHARSET.len();
@@ -23,6 +32,20 @@ pub fn encode(mut num: usize) -> String {
     encoded
 }
 
+/// Decodes a homoglyph-free string into an unsigned integer.
+///
+/// # Examples
+///
+/// ```rust
+/// let decoded = homoglyph_encode::decode("L");
+///
+/// assert_eq!(decoded, 10);
+/// ```
+///
+/// # Panics
+///
+/// If the input string contains a character that's not in the allowed charset,
+/// `decode` will `panic`
 pub fn decode(string: &str) -> usize {
     let chars: Vec<char> = string.chars().collect();
     let base = CHARSET.len();

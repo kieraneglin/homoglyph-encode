@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["decode",""],["encode","Encodes a given number as a homoglyph-free string."]]});
