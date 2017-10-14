@@ -21,7 +21,7 @@ I was bored and wanted to try something new.
 
 ```rust
 // cargo.toml
-homoglyph-encode = { git = "https://github.com/kieraneglin/homoglyph-encode" }
+homoglyph_encode = { git = "https://github.com/kieraneglin/homoglyph-encode" }
 ```
 ```rust
 extern crate homoglyph_encode;
