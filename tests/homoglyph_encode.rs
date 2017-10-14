@@ -45,3 +45,10 @@ fn encode_is_reversible() {
 
     assert_eq!(decode(&encode(num)), num);
 }
+
+#[test]
+fn reverses_large_numbers() {
+    let num = usize::max_value();
+
+    assert_eq!(decode(&encode(num)), num);
+}
